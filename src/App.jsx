@@ -1,50 +1,24 @@
-import Profile from './components/User'
+import Profile from './components/Profile/User'
 import user from './jsons/user.json'
+import Statistics from './components/Data/Statistics'
+import data from './jsons/data.json'
 
 const App = () => {
   return (
-    <div>
-      {
+    <div>    
         <Profile
-        key={user.tag}        
+        key={user.tag}
+        avatar={user.avatar}
         username={user.username}
         tag={user.tag}
         location={user.location}
-        avatar={user.avatar}
-        followers={user.stats.followers}
-        views={user.stats.views}
-        likes={user.stats.likes}
-      />
-      } 
+        stats={user.stats}        
+        />         
+      
+      <Statistics title="Upload stats" stats={data} />
+      <Statistics stats={data} />
     </div>
   );
 };
 
 export default App;
-
-
-// {users.map(user => (
-//         <Profile
-//         key={user.tag}
-//         avatar={user.avatar}
-//         username={user.username}
-//         tag={user.tag}
-//         location={user.location}
-//         followers={user.stats.followers}
-//         views={user.stats.views}
-//         likes={user.stats.likes}
-//       />
-//       ))}
-
-// {
-//         <Profile
-//         key={user.tag}
-//         avatar={user.avatar}
-//         username={user.username}
-//         tag={user.tag}
-//         location={user.location}
-//         followers={user.stats.followers}
-//         views={user.stats.views}
-//         likes={user.stats.likes}
-//       />
-//       } 
