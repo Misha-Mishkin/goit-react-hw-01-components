@@ -1,0 +1,24 @@
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+.item {
+    display: flex;
+    padding-bottom: 15px;       
+}
+
+.status {
+
+}
+
+.avatar {
+padding-right: 10px;
+}
+
+.name {
+    font-weight: 500;
+}
