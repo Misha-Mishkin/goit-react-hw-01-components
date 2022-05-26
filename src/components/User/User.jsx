@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 import s from './User.module.css'
 
-const Profile = ({ username, tag, location, avatar, stats }) => {
+const User = ({ username, tag, location, avatar, stats }) => {
   const { followers, views, likes } = stats;
   return (
     <div className={s.profile}>
@@ -34,12 +34,16 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
   );
 };
 
-Profile.propTypes = {
+User.propTypes = {
   username: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  stats: PropTypes.objectOf(PropTypes.number).isRequired,
+  stats: PropTypes.shape({
+      followers: PropTypes.number.isRequired,
+      views: PropTypes.number.isRequired,
+      likes: PropTypes.number.isRequired,
+  }),  
 };
 
-export default Profile;
+export default User;

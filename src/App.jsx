@@ -1,8 +1,8 @@
-import Profile from 'components/Profile/User'
+import User from 'components/User/User'
 import user from './jsons/user.json'
-import Statistics from 'components/Data/Statistics'
+import Statistics from 'components/Statistics/Statistics'
 import data from './jsons/data.json'
-import FriendList from 'components/Friends/FriendList'
+import FriendList from 'components/FriendList/FriendList'
 import friends from './jsons/friends.json'
 import TransactionHistory from 'components/TransactionHistory/TransactionHistory'
 import transactions from './jsons/transactions.json'
@@ -10,8 +10,7 @@ import transactions from './jsons/transactions.json'
 const App = () => {
   return (
     <div>    
-        <Profile
-        key={user.tag}
+        <User        
         avatar={user.avatar}
         username={user.username}
         tag={user.tag}
